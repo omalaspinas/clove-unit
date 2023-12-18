@@ -3748,6 +3748,8 @@ int __clove_runner_auto(int argc, char* argv[]) {
             cmd_result =  result;
             break;
         }
+	__clove_vector_free(&cmd_handlers);
+        __clove_cmdline_free(&cmdline);
     });
 
     __clove_vector_free(&cmd_handlers);
